@@ -59,7 +59,7 @@ export const IosMockup: React.FC = () => {
         </div>
 
         {/* Filter Pills */}
-        <div className="px-6 flex gap-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="px-6 flex gap-2 mb-3 overflow-x-auto pb-2 scrollbar-hide">
           {[
             { label: "All", color: null, active: true },
             { label: "Personal", color: "bg-blue-500", active: false },
@@ -93,11 +93,6 @@ export const IosMockup: React.FC = () => {
                 glow: "shadow-[0_0_8px_rgba(168,85,247,0.4)]",
               },
               {
-                label: "Email professors about review",
-                color: "bg-purple-500",
-                glow: "shadow-[0_0_8px_rgba(168,85,247,0.4)]",
-              },
-              {
                 label: "Fix Telus Sim",
                 color: "bg-blue-500",
                 glow: "shadow-[0_0_8px_rgba(59,130,246,0.4)]",
@@ -113,7 +108,7 @@ export const IosMockup: React.FC = () => {
             ].map((task) => (
               <div
                 key={task.label}
-                className={`group flex ${task.date ? "items-start" : "items-center"} py-4 border-b border-zinc-800/50 hover:bg-white/5 active:bg-white/10 -mx-4 px-4 transition-colors rounded-2xl cursor-pointer`}
+                className={`group flex ${task.date ? "items-start" : "items-center"} py-3 border-b border-zinc-800/50 hover:bg-white/5 active:bg-white/10 -mx-4 px-4 transition-colors rounded-2xl cursor-pointer`}
               >
                 <div
                   className={`w-6 h-6 rounded-full border-2 border-zinc-600 mr-4 shrink-0 transition-colors group-hover:border-zinc-400 group-active:bg-white/10 ${task.date ? "mt-0.5" : ""}`}
@@ -161,7 +156,7 @@ export const IosMockup: React.FC = () => {
         </div>
 
         {/* Floating Add Task */}
-        <div className="absolute bottom-26 left-0 right-0 flex justify-center pointer-events-none z-10">
+        <div className="absolute bottom-28 left-0 right-0 flex justify-center pointer-events-none z-10">
           <button className="pointer-events-auto bg-[#2C2C2E] hover:bg-[#3A3A3C] active:bg-[#4A4A4C] text-white px-6 py-3.5 rounded-full font-semibold flex items-center gap-2.5 shadow-[0_8px_30px_rgb(0,0,0,0.6)] border border-white/10 transition-all hover:scale-105 active:scale-95 cursor-pointer">
             <div className="bg-white rounded-full p-0.5">
               <PlusIcon className="w-3.5 h-3.5 text-black" />

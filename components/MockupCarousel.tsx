@@ -7,10 +7,10 @@ export const MockupCarousel: React.FC = () => {
   const [index, setIndex] = useState(1);
 
   useEffect(() => {
-    // const timer = setInterval(() => {
-    //   setIndex((prev) => (prev === 0 ? 1 : 0));
-    // }, 5000);
-    // return () => clearInterval(timer);
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 5000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
