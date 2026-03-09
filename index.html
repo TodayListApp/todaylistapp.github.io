@@ -37,5 +37,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+      window.$ujq = window.$ujq || [];
+      window.uj =
+        window.uj ||
+        new Proxy(
+          {},
+          {
+            get:
+              (_, p) =>
+              (...a) =>
+                window.$ujq.push([p, ...a]),
+          },
+        );
+      document.head.appendChild(
+        Object.assign(document.createElement("script"), {
+          src: "https://cdn.userjot.com/sdk/v2/uj.js",
+          type: "module",
+          async: !0,
+        }),
+      );
+    </script>
+    <script>
+      window.uj.init("cmmjgaiyi05qf0ink1lgtt728", {
+        widget: true,
+        position: "right",
+        theme: "auto",
+      });
+    </script>
   </body>
 </html>
