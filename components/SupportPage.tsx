@@ -62,6 +62,10 @@ export function SupportPage() {
     {
       question: "How do I cancel my subscription?",
       answer: "You can manage your subscription directly through the App Store on your device by going to Settings > Apple ID > Subscriptions.",
+    },
+    {
+      question: "How can I restore my subscription?",
+      answer: "To restore your subscription, open the Today app, go to Settings, and tap 'Restore Purchases'. Your active subscription will be recognized immediately.",
     }
   ];
 
