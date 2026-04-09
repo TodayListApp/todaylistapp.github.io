@@ -37,7 +37,7 @@ export function SupportPage() {
               },
             ],
             subject: subject,
-            htmlContent: message,
+            htmlContent: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><hr><p>${message}</p>`,
           }),
         },
       );
