@@ -17,6 +17,7 @@ import {
 import { ManifestoPage } from "./components/ManifestoPage";
 import { MockupCarousel } from "./components/MockupCarousel";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
+import { SupportPage } from "./components/SupportPage";
 import { TermsAndConditions } from "./components/TermsAndConditions";
 
 type Theme = "light" | "dark" | "system";
@@ -358,6 +359,7 @@ function AppContent() {
         <Route path="/manifesto" element={<ManifestoPage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/support" element={<SupportPage />} />
       </Routes>
 
       {/* Footer */}
@@ -391,6 +393,12 @@ function AppContent() {
                 className="hover:text-zinc-900 dark:hover:text-white transition-colors"
               >
                 Terms & Conditions
+              </Link>
+              <Link
+                to="/support"
+                className="hover:text-zinc-900 dark:hover:text-white transition-colors"
+              >
+                Support
               </Link>
             </div>
             <div className="flex gap-6 text-zinc-400">
