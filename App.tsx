@@ -155,12 +155,14 @@ function AppContent() {
               </AnimatePresence>
             </div>
 
-            <a
-              href="#download"
-              className="px-5 py-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium rounded-full hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
+            <button
+              onClick={() => {
+                document.getElementById("download")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-5 py-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-sm font-medium rounded-full hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors cursor-pointer"
             >
               Get App
-            </a>
+            </button>
           </div>
         </div>
       </nav>
@@ -193,8 +195,13 @@ function AppContent() {
                     for Apple devices.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-                    <button className="flex items-center gap-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-8 py-4 rounded-2xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-zinc-200 dark:shadow-none">
+                  <div id="download" className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 scroll-mt-24">
+                    <a
+                      href="https://apps.apple.com/us/app/today-a-daily-to-do-list/id6759506994"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-8 py-4 rounded-2xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-zinc-200 dark:shadow-none"
+                    >
                       <DownloadIcon className="w-6 h-6" />
                       <div className="text-left">
                         <div className="text-xs text-zinc-400 dark:text-zinc-500 font-medium">
@@ -204,7 +211,7 @@ function AppContent() {
                           App Store
                         </div>
                       </div>
-                    </button>
+                    </a>
                     <button className="flex items-center gap-3 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-800 px-8 py-4 rounded-2xl hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:scale-105 active:scale-95">
                       <div className="text-left">
                         <div className="text-xs text-zinc-400 font-medium">
